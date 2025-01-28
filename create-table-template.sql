@@ -62,9 +62,10 @@ CREATE TABLE FlightCrewAssignment(
 desc FlightCrewAssignment;
 
 CREATE TABLE GroundCrewAssignment(
-    AssignmentID INT AUTO_INCREMENT PRIMARY KEY'
+    AssignmentID INT AUTO_INCREMENT PRIMARY KEY,
     AircraftID INT NOT NULL,
     CrewID INT NOT NULL,
     Task ENUM('Fueling','Loading','Cleaning','Inspection') NOT NULL,
-    
-)
+    FOREIGN KEY (AircraftID) REFERENCES Aircraft(AircraftID),
+    FOREIGN KEY (CrewID) REFERENCES Crew(CrewID)
+);
