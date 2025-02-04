@@ -4,6 +4,8 @@ CREATE TABLE Aircraft(
   Model VARCHAR(50) NOT NULL, Manufacturer VARCHAR(50), Capacity INT,
   Status ENUM('Active','Grounded','In Maintenance') DEFAULT 'Active' );
 
+desc Aircraft;
+
 CREATE TABLE Flight(
     FlightID INT AUTO_INCREMENT PRIMARY KEY,
     AircraftID INT NOT NULL,
@@ -69,3 +71,4 @@ CREATE TABLE GroundCrewAssignment(
     FOREIGN KEY (AircraftID) REFERENCES Aircraft(AircraftID),
     FOREIGN KEY (CrewID) REFERENCES Crew(CrewID)
 );
+desc GroundCrewAssignment;
