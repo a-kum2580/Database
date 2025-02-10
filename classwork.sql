@@ -37,3 +37,14 @@ INSERT INTO Employee (EmpNo, Ename, Job, Salary, DeptNo) VALUES
 ('E007', 'Solomon', 'Teacher', 30000,30);
 
 SELECT * FROM Employee;
+use bscs;
+
+USE BSCS;
+
+SHOW TABLES;
+
+SELECT * FROM Employee;
+
+UPDATE Employee set salary = case when job = 'clerk' then salary*1.1 when job='manager' then salary*1.05 when job='teacher' then salary*1.15 else salary*1.08 end;
+
+select * from Employee
