@@ -72,3 +72,4 @@ CREATE TABLE GroundCrewAssignment(
     FOREIGN KEY (CrewID) REFERENCES Crew(CrewID)
 );
 desc GroundCrewAssignment;
+use AircraftFM;
